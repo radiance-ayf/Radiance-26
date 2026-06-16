@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Radiance '26 Youth Fest</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Event Modal -->
+
+<div id="eventModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">
+            &times;
+        </span>
+
+        <h2 id="modalTitle"></h2>
+
+        <div id="modalBody"></div>
+
+    </div>
+
+</div>
+
+<!-- Navigation -->
+
+<nav>
+
+    <div class="logo">
+        RADIANCE '26
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <ul id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+<!-- Hero Section -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <p class="church">
+            TELC ANBUNATHAR CHURCH, ANNA NAGAR
+        </p>
+
+        <h1 class="radiance-title">
+            RADIANCE '26
+        </h1>
+
+        <h2 class="youthfest">
+            Youth Fest
+        </h2>
+
+        <p class="verse">
+
+            Those who are wise will shine like the brightness of the heavens,
+            and those who lead many to righteousness,
+            like the stars for ever and ever.
+            <br>
+            Daniel 12:3
+
+        </p>
+
+        <div id="countdown"></div>
+
+        <div class="buttons">
+
+            <a href="#schedule" class="btn">
+                View Schedule
+            </a>
+
+            <a href="#events" class="btn secondary">
+                Explore Events
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- Event Details -->
+
+<section id="details" class="event-details">
+
+    <h2>EVENT DETAILS</h2>
+
+    <div class="event-grid">
+
+        <div class="card">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h3>Date</h3>
+            <p>June 27, 2026</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-clock"></i>
+            <h3>Time</h3>
+            <p>9:00 AM – 5:00 PM</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Venue</h3>
+            <p>TELC Anbunathar Church, Anna Nagar</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Events -->
+
+<section id="events">
+
+    <h2>EVENTS</h2>
+
+    <div class="event-grid">
+
+        <div class="event-card" onclick="openModal('quiz')">
+            ❓
+            <h3>Genesis Face-Off</h3>
+            <p>Bible Quiz</p>
+        </div>
+
+        <div class="event-card" onclick="openModal('trivia')">
+            📖
+            <h3>Gospel Unleashed</h3>
+            <p>Bible Trivia</p>
+        </div>
+
+        <div class="event-card" onclick="openModal('singing')">
+            🎤
+            <h3>Incandescent Voices</h3>
+            <p>Group Singing</p>
+        </div>
+
+        <div class="event-card" onclick="openModal('depiction')">
+            🎭
+            <h3>Divine Dramatics</h3>
+            <p>Depiction</p>
+        </div>
+
+        <div class="event-card" onclick="openModal('drawing')">
+            🎨
+            <h3>Heavenly Creation</h3>
+            <p>Art</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Schedule -->
+
+<section id="schedule">
+
+    <h2>EVENT SCHEDULE</h2>
+
+    <div class="timeline">
+
+        <div class="time-card">
+            <span>9:00 – 9:20 AM</span>
+            Registration & Seating
+        </div>
+
+        <div class="time-card">
+            <span>9:20 – 9:35 AM</span>
+            Opening Prayer & Welcome
+        </div>
+
+        <div class="time-card">
+            <span>9:35 – 10:00 AM</span>
+            Praise & Worship
+        </div>
+
+        <div class="time-card">
+            <span>10:00 – 10:20 AM</span>
+            Genesis Face-Off – Preliminary Round
+        </div>
+
+        <div class="time-card">
+            <span>10:00 – 10:20 AM</span>
+            Tea Break (Other Participants)
+        </div>
+
+        <div class="time-card">
+            <span>10:20 – 10:30 AM</span>
+            Tea Break (Quiz Participants)
+        </div>
+
+        <div class="time-card">
+            <span>10:30 – 11:00 AM</span>
+            Chief Guest Address
+        </div>
+
+        <!-- Parallel Events -->
+
+        <div class="parallel-block">
+
+            <div class="parallel-time">
+                11:00 – 12:00 PM
+            </div>
+
+            <div class="parallel-events">
+
+                <div class="parallel-card">
+                    <div class="icon">❓</div>
+                    <h3>Genesis Face-Off</h3>
+                    <p>Bible Quiz Finals</p>
+                </div>
+
+                <div class="parallel-card">
+                    <div class="icon">🎨</div>
+                    <h3>Heavenly Creation</h3>
+                    <p>Art Competition</p>
+                </div>
+
+            </div>
+
+            <div class="parallel-label">
+                PARALLEL EVENTS
+            </div>
+
+        </div>
+
+        <div class="time-card">
+            <span>12:00 – 12:45 PM</span>
+            Lunch Break
+        </div>
+
+        <div class="time-card">
+            <span>12:45 – 2:15 PM</span>
+            Incandescent Voices
+        </div>
+
+        <div class="parallel-block">
+
+            <div class="parallel-time">
+                2:15 – 2:45 PM
+            </div>
+
+            <div class="parallel-events">
+
+                <div class="parallel-card">
+                    <div class="icon">🎭</div>
+                    <h3>Divine Dramatics</h3>
+                    <p>Depiction</p>
+                </div>
+
+                <div class="parallel-card">
+                    <div class="icon">📖</div>
+                    <h3>Gospel Unleashed</h3>
+                    <p>Bible Trivia</p>
+                </div>
+
+            </div>
+
+            <div class="parallel-label">
+                PARALLEL EVENTS
+            </div>
+
+        </div>
+
+        <div class="time-card">
+            <span>2:45 – 3:05 PM</span>
+            Tea Break
+        </div>
+
+        <div class="time-card">
+            <span>3:05 – 4:30 PM</span>
+            Prize Distribution & Special Recognitions
+        </div>
+
+        <div class="time-card">
+            <span>4:30 – 5:00 PM</span>
+            Vote of Thanks & Closing Prayer
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Venue -->
+
+<section id="venue">
+
+    <h2>📍 VENUE</h2>
+
+    <div class="venue-container">
+
+        <div class="venue-card">
+
+
+            <h3>TELC Anbunathar Church</h3>
+
+            <p>
+                Anna Nagar, Chennai
+            </p>
+
+            <p>
+                Join us for a day of worship, fellowship,
+                learning and celebration at Radiance'26.
+            </p>
+
+            <div class="venue-buttons">
+
+                <a
+                href="https://maps.app.goo.gl/VT6GzuCRRYWoER7q6?g_st=aw"
+                target="_blank"
+                class="btn">
+                📍 Get Directions
+                </a>
+
+                <a
+                href="#contact"
+                class="btn secondary">
+                ☎ Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="gallery">
+
+    <h2>📸 EVENT MEMORIES</h2>
+
+    <p class="gallery-text">
+        Thank you for being part of Radiance'26.
+        All event photographs are available in our
+        Google Drive gallery. Click below to view
+        and download your photos.
+    </p>
+
+    <div class="gallery-box">
+
+        <a
+        href="https://drive.google.com/drive/u/2/folders/1A1FmsT6LVjwt74IQjVJy2atiM3Jk6cPE"
+        target="_blank"
+        class="btn">
+
+        📸 Open Gallery
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+    <h2>☎ CONTACT</h2>
+
+    <div class="event-grid">
+
+        <div class="card">
+            <h3>Secretary</h3>
+            <p>Afia</p>
+            <p>📞 9445607407</p>
+        </div>
+
+        <div class="card">
+            <h3>Treasurer</h3>
+            <p>Timothy</p>
+            <p>📞 9361357981</p>
+        </div>
+
+        <div class="card">
+            <h3>Youth Incharge</h3>
+            <p>Mr. David</p>
+            <p>📞 9500070532</p>
+        </div>
+
+    </div>
+
+</section>
+
+<div id="starfield"></div>
+
+<!-- Footer -->
+
+<footer>
+
+    <p>
+        Radiance'26 Youth Fest
+    </p>
+
+    <p>
+        Presented by TELC Anbunathar Church AYF
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
