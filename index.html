@@ -34,6 +34,7 @@
       <li><a href="#events">Events</a></li>
       <li><a href="#schedule">Schedule</a></li>
       <li><a href="#venue">Venue</a></li>
+      <li><a href="#thankyou">Thank You</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -261,6 +262,30 @@
     </div>
   </section>
 
+<!-- ══════════════════════════════════════
+     THANK YOU
+══════════════════════════════════════ -->
+<section id="thankyou" aria-labelledby="thankyou-heading">
+  <h2 id="thankyou-heading">Thank You</h2>
+  <div class="thankyou-video-wrap reveal">
+    <video
+      id="thankyouVideo"
+      src="vdeo.mp4"
+      loop
+      muted
+      playsinline
+      preload="metadata"
+      aria-label="Radiance 26 thank you video"
+    ></video>
+    <button id="unmuteBtn" class="unmute-btn" aria-label="Unmute video">
+      <i class="fas fa-volume-mute"></i>
+    </button>
+    <button id="playPauseBtn" class="playpause-btn" aria-label="Pause video">
+      <i class="fas fa-pause"></i>
+    </button>
+  </div>
+</section>
+
   <!-- ══════════════════════════════════════
        GALLERY
   ══════════════════════════════════════ -->
@@ -343,5 +368,33 @@
 
   <!-- Scripts -->
   <script src="script.js" defer></script>
+  <!-- ══════════════════════════════════════
+     VIDEO POPUP MODAL
+══════════════════════════════════════ -->
+<div id="videoPopup" class="vpopup" role="dialog" aria-modal="true" aria-label="Welcome video">
+  <div class="vpopup-backdrop"></div>
+  <div class="vpopup-content">
+    <div class="vpopup-controls">
+      <button id="vpopupPlayPause" class="vpopup-btn" aria-label="Pause video">
+        <i class="fas fa-pause"></i>
+      </button>
+      <button id="vpopupUnmute" class="vpopup-btn" aria-label="Unmute video">
+        <i class="fas fa-volume-mute"></i>
+      </button>
+      <button id="vpopupClose" class="vpopup-btn vpopup-close" aria-label="Close video">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <video
+      id="vpopupVideo"
+      src="vdeo.mp4"
+      loop
+      muted
+      playsinline
+      preload="auto"
+      aria-label="Radiance 26 welcome video"
+    ></video>
+  </div>
+</div>
 </body>
 </html>
