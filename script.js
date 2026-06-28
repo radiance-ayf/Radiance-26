@@ -555,7 +555,7 @@ document.body.classList.add('mode-night');
 
   function update() {
     const diff = target - Date.now();
-    if (diff <= 0) { el.textContent = '✦ Event is Live! ✦'; return; }
+    if (diff <= 0) { el.textContent = '✦ Event has Concluded! ✦'; return; }
     const d = Math.floor(diff / 86400000);
     const h = Math.floor((diff % 86400000) / 3600000);
     const m = Math.floor((diff % 3600000)  / 60000);
